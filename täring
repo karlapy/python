@@ -1,0 +1,20 @@
+import random
+mangijaskoor = 0
+arvutiskoor = 0
+
+def Taring(arvutiskoor, mangijaskoor):
+    for Taring in range(0, 5):
+        mangija = random.randint(1, 6)
+        print("Kasutaja viskas... " + str(mangija))
+        arvuti = random.randint(1, 6)
+        print("Arvuti viskas... " + str(arvuti))
+        if mangija == arvuti:
+            print("Mõlemad viskasid sama arvu")
+        elif mangija > arvuti:
+            print("Kasutaja võitis selle korra.")
+            mangijaskoor = mangijaskoor + 1
+        elif mangija < arvuti:
+            print("Arvuti võitis selle korra.")
+            arvutiskoor = arvutiskoor + 1
+Taring(arvutiskoor, mangijaskoor)
+print("Kasutajal on " + str(mangijaskoor) + " punkti ja arvutil on " + str(arvutiskoor) + " punkti")   
