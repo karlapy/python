@@ -1,0 +1,110 @@
+def Algus():
+    print("""Oled sattunud kellegi teise asemel hullumajja, kui sa seda üritad seletada, siis sind ei usuta.")
+Ainus võimalus kuidas välja saada  on põgenemine")
+Hullumajal on kokku kaheksa korrust, sina asud viiendal korrusel.")
+Põgeneda saab kahest kohast.""")
+def Pogenemised():
+    i = input("Kuidas otsustad põgeneda? Katuselt (ka) või peauksest (pu)? ")
+    if i.lower() == "ka":
+        print("Otsustad põgeneda katuse kaudu. ")
+        Katus()
+    elif i.lower() == "pu":
+        print("Otsustad põgeneda peaukse kaudu. ")
+        Peauks()
+#Põgenemine katuse kaudu
+        
+def Katus():
+    i = input("Kas toauks on lahti? ")
+    if i.lower() == "jah":
+        print("Teed ukse lahti. ")
+        Inimene()
+    elif i.lower() == "ei":
+        print("Põgenemine jääb ära. ")
+        return;
+
+def Inimene():
+    i = input("Näed koridoris inimesi liikumas. Kas sa ootad (o) või jooksed ja loodad et keegi ei märka (j)? ")
+    if i.lower() == "o":
+        print("Inimesed lahkusid koridorist ja sa liikusid toast välja. ")
+        Koridor()
+    elif i.lower() == "j":
+        print("Jäid vahele.")
+        return;
+
+def Koridor():
+    i = input("Millega otsustad kaheksandale korrusele minna. Liftiga (l) või trepist (t)? ")
+    if i.lower() == "l":
+        print("Sõidad liftiga kaheksandale korrusele. ")
+        Kaheksas()
+    elif i.lower() == "t":
+        print("Trepil rääkisid kaks töötajat ja sa jäid neile vahele. ")
+        return;
+    
+def Kaheksas():
+    print("Jõuad liftiga kaheksandale korrusele. Lifti uksed avanevad ja sa näed töötajat, kes on sinu poole seljaga")
+    i = input("Mida otsustad teha? Sõidad liftiga alla (t) või jooksed nurga taha ja loodad et ta ei näe sind (n)? ")
+    if i.lower() == "t":
+        print("Sind ootasid all töötajad, kes avastasid, et sa oled põgenenud. ")
+        return;
+    elif i.lower() == "n":
+        print("Sul vedas, olid piisavalt kiire ja töötaja ei pannud sind tähele. ")
+        Katusel()
+
+def Katusel():
+    print("""Jõuad lõpuks katusele ja leiad redeli.
+Kasutad seda redelit et alla minna.
+Pääsesid põgenema!""")
+    
+#Põgenemine peauksest
+
+def Peauks():
+    i = input("Kas toauks on lahti? ")
+    if i.lower() == "jah":
+        print("Teed ukse lahti. ")
+        Koridoris()
+    elif i.lower() == "ei":
+        print("Põgenemine jääb ära. ")
+        return;
+
+def Koridoris():
+    i = input("Näed koridoris inimesi liikumas. Kas sa ootad (o) või jooksed ja loodad et keegi ei märka (j)? ")
+    if i.lower() == "o":
+        print("Inimesed lahkusid koridorist ja sa liikusid toast välja. ")
+        Liikumine()
+    elif i.lower() == "j":
+        print("Jäid vahele.")
+        return;
+    
+def Liikumine():
+    i = input("Kas sa lähed alla trepist (t) või sõidad liftiga (l)? ")
+    if i.lower() == "t":
+        print("Lähed trepist alla. ")
+        Trepp()
+    elif i.lower() == "l":
+        print("Lift tuleb kaheksandalt korruselt. See võtab liiga palju aega ja sa jääd vahele.")
+        return;
+    
+def Trepp():
+    print("Liigud trepist alla ja kuuled, et keegi hakkab ülevalt alla tulema.")
+    i = input("Kas sa peidad ennast trepi alla (p) või jooksed (j)? ")
+    if i.lower == "j":
+        print("Hakkad jooksma ja jõuad peaukse juurde. ")
+        Peaukse()
+    elif i.lower == "p":
+        print("Tegu oli koristajaga. Ta märkas sind ja andis häiret. PÕGENEMIST EI TOIMU. ")
+        return;
+
+def Peaukse():
+    i = input("""Jooksed trepikojast välja ja näed, et sinu poole jooksevad töötajad.
+Mida otsustad teha? Jooksen peaukse jurde (pu) või annan alla (aa)? """)
+    if i.lower == "pu":
+        print("""Jooksed peaukse juurde. Õnneks ei ole uks lukus.
+Jooksed uksest välja ja peidad ennast põõsastesse. Töötajad ei oska sind seal otsida.""")
+        return;
+    elif i.lower == "aa":
+        print("Otsustasid alla anda. ")
+        return;
+
+        
+Algus()
+Pogenemised()
