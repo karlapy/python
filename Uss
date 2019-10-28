@@ -1,0 +1,30 @@
+from pygame import *
+from sys import *
+
+init()
+screen = display.set_mode([640,480])
+pea_pilt = image.load('pea2.png')
+samm = 10
+x = 50
+y = 50
+
+mäng_käib = True
+
+while mäng_käib:
+    for e in event.get():
+        if e.type == QUIT:
+            mäng_käib = False
+        elif e.type == KEYDOWN:
+            if e.key == K_UP:
+                y -= samm
+            if e.key == K_DOWN:
+                y += samm
+            if e.key == K_LEFT:
+                x -= samm
+            if e.key == K_RIGHT:
+                x += samm
+screen.fill([255,255,255])
+screen.blit(pea_pilt, [x, y])
+display.flip()
+time.delay(16)
+quit()
