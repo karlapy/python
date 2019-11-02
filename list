@@ -1,0 +1,18 @@
+import random
+
+Valikvoimalused = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("Valikvõimalused: " + str(Valikvoimalused))
+numbrid = []
+for i in range(0,5):
+    uus_list = random.randint(0,9)
+    numbrid.extend(str(uus_list))
+print("Numbrid listis 'numbrid' " + str(numbrid))
+
+def Arvamine():
+    global Valikvoimalused, numbrid
+    arvamus = int(input("Arvake, milline arv leidub listis: "))
+    if arvamus in numbrid:
+        print("Arvasid õigesti!")
+    else:
+        print("Arvasid valesti!")
+Arvamine()
