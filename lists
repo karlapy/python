@@ -1,0 +1,22 @@
+import random
+
+Valikvoimalused = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("Valikvõimalused: " + str(Valikvoimalused))
+lists = []
+for i in range(0,5):
+    listike = random.randint(0,9)
+    lists.extend(str(listike))
+print("Numbrid listis 'numbrid' " + str(lists))
+
+def Arvamine():
+    arvamus = int(input("Arvake, milline arv leidub listis: "))
+    if str(arvamus) in lists:
+        print("Arvasid õigesti!")
+    else:
+        print("Arvasid valesti!")
+    while str(arvamus) in lists or Valikvoimalused:
+        lists.remove(str(arvamus))
+        Valikvoimalused.remove(arvamus)
+    print(lists)
+    print(Valikvoimalused)
+Arvamine()
